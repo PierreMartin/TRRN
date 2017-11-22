@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
 const CoursesList = ({ courses }) => {
 	let coursesNode = '';
@@ -25,11 +25,6 @@ const CoursesList = ({ courses }) => {
 
 		</div>
 	);
-};
-
-
-CoursesList.propTypes = {
-	// courses: PropTypes.arrayOf.isRequired
 };
 
 export default CoursesList;

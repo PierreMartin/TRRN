@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import withRedux from 'next-redux-wrapper';
 import initStore from '../store/configureStore';
 import { typingCreateCourseAction, createCourseAction, fetchCoursesAction } from '../actions/courses';
-import Link from 'next/link';
 import Layout from '../components/Layouts/MyLayout';
 import Input from '../components/input/input';
 import CoursesList from '../components/coursesList/coursesList';
 
 
-class Index extends React.Component {
+class Index extends Component {
 	constructor(props) {
 		super(props);
 		this.handleChangeMessage = this.handleChangeMessage.bind(this);
@@ -69,6 +68,8 @@ HomePage.propTypes = {
 };
 */
 
+// TODO gerer SASS
+// TODO gerer les routes coté server
 // TODO gerer variables env pour configureStore
 Index.propTypes = {
 	courses: PropTypes.arrayOf.isRequired,
