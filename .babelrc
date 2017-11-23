@@ -1,19 +1,31 @@
 {
-  "presets": [
-    ["env",
-      {
-        "targets": {
-          "browsers": ["last 2 versions", "safari >= 7", "ie >= 7"]
-        }
-      }
-    ],
-		"next/babel",
-    "react",
-		"stage-0"
-  ],
 	"plugins": [
-		["module-resolver", {
-			"root": ["./"]
-		}]
-	]
+		[
+			"module-resolver", {
+			"root": ["./"],
+			"alias": {
+				"styles": "./styles"
+			},
+			"cwd": "babelrc"
+		}],
+		[
+			"wrap-in-js",
+			{
+				"extensions": ["css$", "scss$"]
+			}
+		]
+	],
+	"presets": [
+		["env",
+			{
+				"targets": {
+					"browsers": ["last 2 versions", "safari >= 7", "ie >= 7"]
+				}
+			}
+		],
+		"next/babel",
+		"react",
+		"stage-0"
+	],
+	"ignore": []
 }

@@ -6,7 +6,7 @@ import { typingCreateCourseAction, createCourseAction, fetchCoursesAction } from
 import Layout from '../components/Layouts/MyLayout';
 import Input from '../components/input/input';
 import CoursesList from '../components/coursesList/coursesList';
-
+import stylesheet from './css/index.scss';
 
 class Index extends Component {
 	constructor(props) {
@@ -39,7 +39,8 @@ class Index extends Component {
 
 		return (
 			<Layout>
-				<h1>Hello, world!</h1>
+				<style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+				<h1 className="red">Hello, world!</h1>
 				<img src="../static/cat.jpg" alt="cat" />
 
 				<Input
@@ -68,7 +69,6 @@ HomePage.propTypes = {
 };
 */
 
-// TODO gerer SASS
 // TODO gerer les routes coté server
 // TODO gerer variables env pour configureStore
 Index.propTypes = {
