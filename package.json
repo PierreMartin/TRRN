@@ -58,6 +58,7 @@
     "postcss-loader": "^2.0.8",
     "react-test-renderer": "^16.0.0",
     "redux-logger": "^3.0.6",
+    "url-loader": "^0.6.2",
     "webpack": "^3.8.1"
   }
 }

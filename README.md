@@ -6,3 +6,5 @@
 - ESLint + config-airbnb
 - SASS + PostCSS
 - Jest + Enzyme for JavaScript Testing
+
+If you have a error at installation of node-sass, run `sudo npm install --unsafe-perm node-sass`
