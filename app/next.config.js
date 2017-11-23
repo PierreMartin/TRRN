@@ -19,7 +19,7 @@ module.exports = {
 				use: ['babel-loader', 'raw-loader', 'postcss-loader']
 			},
 
-			// SASS :
+			// CSS / SCSS / SASS :
 			{
 				test: /\.s(a|c)ss$/,
 				use: ['babel-loader', 'raw-loader', 'postcss-loader',
