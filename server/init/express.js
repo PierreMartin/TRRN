@@ -1,4 +1,5 @@
 import bodyParser from 'body-parser';
+const dev = process.env.NODE_ENV !== 'production';
 
 export default (server) => {
 	server.set('port', (process.env.PORT || 3000));
@@ -18,7 +19,7 @@ export default (server) => {
 
 	console.log('--------------------------');
 	console.log('===>  Starting Server . . .');
-	console.log(`===>  Environment: ${process.env.NODE_ENV}`);
+	console.log(`===>  Environment dev: ${dev}`);
 	console.log(`===>  Listening on port: ${server.get('port')}`);
 	console.log('--------------------------');
 

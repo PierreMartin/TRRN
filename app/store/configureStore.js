@@ -1,15 +1,15 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from '../reducers';
+const dev = process.env.NODE_ENV !== 'production';
 
 const configureStore = (preloadedState) => {
 	const middleware = [thunk];
 
-	// TODO remettre la condition une fois le fichier .env créé
-	// if (process.env.NODE_ENV === 'dev') {
+	if (dev) {
 		const { logger } = require('redux-logger');
 		middleware.push(logger);
-	//}
+	}
 
 	const store = createStore(
 		rootReducer,

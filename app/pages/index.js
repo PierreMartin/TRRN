@@ -69,7 +69,6 @@ HomePage.propTypes = {
 };
 */
 
-// TODO gerer variables env pour configureStore
 // TODO linter
 // TODO MongoDB
 Index.propTypes = {
