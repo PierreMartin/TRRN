@@ -1,8 +1,8 @@
 import bodyParser from 'body-parser';
 
-export default (app) => {
-	app.set('port', (process.env.PORT || 3000));
-	app.use(bodyParser.json());
+export default (server) => {
+	server.set('port', (process.env.PORT || 3000));
+	server.use(bodyParser.json());
 
 	// I am adding this here so that the Heroku deploy will work
 	// Indicates the app is behind a front-facing proxy,
@@ -14,15 +14,15 @@ export default (app) => {
 	// To enable it, use the values described in the trust proxy options table.
 	// The trust proxy setting is implemented using the proxy-addr package. For more information, see its documentation.
 	// loopback - 127.0.0.1/8, ::1/128
-	app.set('trust proxy', 'loopback');
+	server.set('trust proxy', 'loopback');
 
 	console.log('--------------------------');
 	console.log('===>  Starting Server . . .');
 	console.log(`===>  Environment: ${process.env.NODE_ENV}`);
-	console.log(`===>  Listening on port: ${app.get('port')}`);
+	console.log(`===>  Listening on port: ${server.get('port')}`);
 	console.log('--------------------------');
 
-	// app.use(passport.initialize());
-	// app.use(passport.session());
-	// app.use(flash());
+	// server.use(passport.initialize());
+	// server.use(passport.session());
+	// server.use(flash());
 };

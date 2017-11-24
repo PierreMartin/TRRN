@@ -3,15 +3,16 @@ import next from 'next';
 // import { connect } from './db';
 // import initPassport from './init/passport';
 import initExpress from './init/express';
-import initRoutes from './init/routes';
+import initRoutesApi from './init/routesApi';
+import initRoutesUrl from './init/routesUrl';
 
 const dev = process.env.NODE_ENV !== 'production';
-const App = next({ dir: './app', dev });
-const handle = App.getRequestHandler();
+const app = next({ dir: './app', dev });
+const handle = app.getRequestHandler();
 
-App.prepare()
+app.prepare()
 	.then(() => {
-		const app = express();
+		const server = express();
 
 		// connect to MongoDB using mongoose - register mongoose Schema
 		/* connect(); */
@@ -20,18 +21,19 @@ App.prepare()
 		/* initPassport(); */
 
 		// Bootstrap application settings
-		initExpress(app);
+		initExpress(server);
 
 		// Note: Some of these routes have passport and database model dependencies
-		initRoutes(app);
+		initRoutesUrl(server, app);
+		initRoutesApi(server);
 
-		app.get('*', (req, res) => {
+		server.get('*', (req, res) => {
 			return handle(req, res);
 		});
 
-		app.listen(app.get('port'), (err) => {
+		server.listen(server.get('port'), (err) => {
 			if (err) throw err;
-			console.log(`==> Open up http://localhost:${app.get('port')}/ in your browser.`);
+			console.log(`==> Open up http://localhost:${server.get('port')}/ in your browser.`);
 		});
 	})
 	.catch((ex) => {
