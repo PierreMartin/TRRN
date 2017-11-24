@@ -69,8 +69,9 @@ HomePage.propTypes = {
 };
 */
 
-// TODO gerer les routes coté server
 // TODO gerer variables env pour configureStore
+// TODO linter
+// TODO MongoDB
 Index.propTypes = {
 	courses: PropTypes.arrayOf.isRequired,
 	typingCreateCourseAction: PropTypes.func.isRequired,
