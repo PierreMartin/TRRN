@@ -28,7 +28,7 @@
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
-    "dev": "node server/index.js",
+    "dev": "babel-node server/index.js",
     "build": "next app build",
     "start": "react-scripts start",
     "test": "jest --coverage",
