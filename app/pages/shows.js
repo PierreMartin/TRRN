@@ -5,10 +5,6 @@ import Layout from '../components/Layouts/MyLayout';
 import LayoutCategories from '../components/Layouts/LayoutCategories';
 
 class ShowsPage extends Component {
-	constructor(props) {
-		super(props);
-	}
-
 	componentDidMount() {
 		// ...
 	}

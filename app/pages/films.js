@@ -7,10 +7,6 @@ import Layout from '../components/Layouts/MyLayout';
 import LayoutCategories from '../components/Layouts/LayoutCategories';
 
 class FilmsPage extends Component {
-	constructor(props) {
-		super(props);
-	}
-
 	componentDidMount() {
 		this.props.fetchFilmsAction();
 	}

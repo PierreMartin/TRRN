@@ -1,6 +1,7 @@
+import React from 'react';
 import Link from 'next/link';
 
-const LayoutCategories = (props) => (
+const LayoutCategories = props => (
 	<div>
 
 		<div className="row">

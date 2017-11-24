@@ -69,7 +69,6 @@ HomePage.propTypes = {
 };
 */
 
-// TODO linter
 // TODO MongoDB
 Index.propTypes = {
 	courses: PropTypes.arrayOf.isRequired,

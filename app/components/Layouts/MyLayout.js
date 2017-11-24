@@ -1,8 +1,9 @@
+import React from 'react';
 import Head from 'next/head';
 import NavMain from './../navigation/NavMain';
 import stylesheet from './../../css/main.scss';
 
-const Layout = (props) => (
+const Layout = props => (
 	<div className="layoutMain">
 		<Head>
 			<title>My page title</title>

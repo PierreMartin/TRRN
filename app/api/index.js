@@ -7,7 +7,7 @@ export const fetchCoursesRequest = () => {
 		.then((res) => {
 			if (res.status === 200) return Promise.resolve(res);
 		})
-		.catch((err) => {
+		.catch(() => {
 			return Promise.reject(courses); // set 'err' as parameter in real world
 		});
 };

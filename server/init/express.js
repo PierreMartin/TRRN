@@ -1,4 +1,5 @@
 import bodyParser from 'body-parser';
+
 const dev = process.env.NODE_ENV !== 'production';
 
 export default (server) => {

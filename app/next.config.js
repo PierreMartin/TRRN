@@ -6,6 +6,16 @@ module.exports = {
 		config.module.rules.push(
 			// CSS / SCSS :
 			{
+				test: /\.(js)$/,
+				enforce: 'pre',
+				exclude: /(node_modules|bower_components)/,
+				loader: 'eslint-loader',
+				options: {
+					emitWarning: true
+				}
+			},
+
+			{
 				test: /\.(css|scss)/,
 				loader: 'emit-file-loader',
 				options: {

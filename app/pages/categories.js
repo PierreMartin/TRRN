@@ -5,14 +5,10 @@ import Layout from '../components/Layouts/MyLayout';
 import LayoutCategories from '../components/Layouts/LayoutCategories';
 
 class CategoriesPage extends Component {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		return (
 			<Layout>
-				<LayoutCategories></LayoutCategories>
+				<LayoutCategories />
 			</Layout>
 		);
 	}

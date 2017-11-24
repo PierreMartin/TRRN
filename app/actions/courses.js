@@ -57,7 +57,7 @@ export function createCourseFailure(data) {
 }
 
 export function createCourseAction(text) {
-	return (dispatch, getState) => {
+	return (dispatch/*, getState*/) => {
 		if (text.trim().length <= 0) return;
 
 		const id = new Date().getTime();

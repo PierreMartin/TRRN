@@ -5,10 +5,6 @@ import Layout from '../components/Layouts/MyLayout';
 import stylesheet from './css/about.scss';
 
 class AboutPage extends Component {
-	constructor(props) {
-		super(props);
-	}
-
 	componentDidMount() {
 		// ...
 	}
